@@ -1,5 +1,22 @@
-/**
- * Created by anna.ostrowska on 21/12/2015.
- */
+import org.junit.Before;
+import org.junit.Test;
+
 public class AddressBookTest {
+
+    @Before
+    public void setUp() {
+
+    }
+
+    @Test
+    public void shouldAddANewContact() {
+
+
+    }
+
+
+    @Test
+    public void shouldRemoveAContact(){
+
+    }
 }
