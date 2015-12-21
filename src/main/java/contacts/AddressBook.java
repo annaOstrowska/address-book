@@ -21,10 +21,12 @@ public class AddressBook {
     }
 
     public void removeContact(Contact contact) {
+
         contacts.remove(contact);
     }
 
     public void clearConatctList() {
+
         contacts.clear();
     }
 }

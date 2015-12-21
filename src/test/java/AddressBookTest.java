@@ -16,7 +16,12 @@ public class AddressBookTest {
 
 
     @Test
-    public void shouldRemoveAContact(){
+    public void shouldRemoveAContact() {
+
+    }
+
+    @Test
+    public void shouldClearAllContactsList() {
 
     }
 }
