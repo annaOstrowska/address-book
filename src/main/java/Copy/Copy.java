@@ -1,4 +1,4 @@
-package Copy;
+package copy;
 
 public class Copy {
     public String copyOutput() {

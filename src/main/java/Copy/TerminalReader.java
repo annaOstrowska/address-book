@@ -1,4 +1,4 @@
-package Copy;
+package copy;
 import java.util.Scanner;
 
 public class TerminalReader implements IReader {

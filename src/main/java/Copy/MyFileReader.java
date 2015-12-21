@@ -1,4 +1,4 @@
-package Copy;
+package copy;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -10,7 +10,7 @@ public class MyFileReader implements IReader {
     public String read() {
         try {
             String workingDir = System.getProperty("user.dir");
-            Reader fileReader = new java.io.FileReader(workingDir + "/src/main/java/Copy/addresses.txt");
+            Reader fileReader = new java.io.FileReader(workingDir + "/src/main/java/copy/addresses.txt");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             StringBuffer stringBuffer = new StringBuffer();
             String line = null;
@@ -18,7 +18,6 @@ public class MyFileReader implements IReader {
                 stringBuffer.append(line).append("\n");
 
             }
-            System.out.println(stringBuffer);
             return stringBuffer.toString();
         }
         catch (FileNotFoundException fnf) {
