@@ -34,6 +34,8 @@ public class Contact {
         return phoneNumber;
     }
 
+    public String getContactAsString(){return firstName + ", " + lastName + ", " + homeAddress + ", " + phoneNumber + ";";}
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }

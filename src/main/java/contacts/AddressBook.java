@@ -33,9 +33,27 @@ public class AddressBook {
         contacts.clear();
     }
 
+    public boolean hasContact(Contact contact) {
+        boolean hasContact = false;
+        for (Contact eachContact: contacts){
+            if (contact == eachContact){
+                hasContact = true;
+            }
+        }
+        return hasContact;
+    }
+
     public int getNumberOfContacts()
     {
         return contacts.size();
+    }
+
+    public String getAddressBookAsString(){
+        String addressBookAsString;
+        for(Contact contact: contacts){
+            contact.getContactAsString();
+        }
+        return null;
     }
 
 }
