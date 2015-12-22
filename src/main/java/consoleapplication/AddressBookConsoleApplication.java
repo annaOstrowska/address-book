@@ -1,15 +1,25 @@
 package consoleapplication;
 
 import contacts.AddressBook;
+import contacts.Contact;
+import copy.AddressSplitter;
+import copy.CONTACTLINES;
+import copy.IReader;
+import copy.MyFileReader;
+
+import contacts.AddressBook;
 import copy.TerminalReader;
 
 public class AddressBookConsoleApplication {
 
-    AddressBook addressBook = new AddressBook();
+    public static AddressBook addressBook = new AddressBook();
 
     public static void main(String [ ] args) {
 
         TerminalReader reader = new TerminalReader();
+        AddressBookConsoleApplication app = new AddressBookConsoleApplication();
+        addressBook = app.loadAddressBook();
+        System.out.println("Would you like to add a new address?");
 
         System.out.println("Welcome to your Address Book.");
         System.out.println("Chose the option and follow the instructions.");
@@ -58,6 +68,19 @@ public class AddressBookConsoleApplication {
 
     }
 
+    private AddressBook loadAddressBook() {
+        Contact contact = new Contact();
+        IReader bookReader = new MyFileReader();
+        AddressSplitter splitter = new AddressSplitter(bookReader.read());
+        for (int i = 0; i < splitter.getAddresses().length; i++) {
+            contact.setFirstName(splitter.getAddressNField(i, CONTACTLINES.FirstName.getValue()));
+            contact.setLastName(splitter.getAddressNField(i, CONTACTLINES.LastName.getValue()));
+            contact.setHomeAddress(splitter.getAddressNField(i, CONTACTLINES.AddressOne.getValue()));
+            contact.setPhoneNumber(splitter.getAddressNField(i, CONTACTLINES.PhoneNumber.getValue()));
+            addressBook.addContact(contact);
+        }
+        return addressBook;
+    }
     private static void deleteContact() {
     }
 
@@ -65,7 +88,4 @@ public class AddressBookConsoleApplication {
         
     }
     
-
-
 }
-

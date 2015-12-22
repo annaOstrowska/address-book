@@ -5,11 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AddressSplitter {
+    private String[] addresses;
 
-
-    String[] addresses;
-
-    AddressSplitter (String fullAddress){
+    public AddressSplitter (String fullAddress){
         this.addresses = readAllAddresses(fullAddress);
 
     }
@@ -18,6 +16,7 @@ public class AddressSplitter {
         return getAddressNArray(addressNo)[field];
     }
 
+    public String[] getAddresses(){return addresses;}
 
     private String[] getAddressNArray(int addressNo){
 

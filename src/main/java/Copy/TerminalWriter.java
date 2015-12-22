@@ -1,8 +1,11 @@
 package copy;
 import java.util.Scanner;
 
-public class TerminalWriter {
-    Scanner scanner = new Scanner(System.in);
-    public String read = "whoopse";
+public class TerminalWriter implements IWriter{
 
+
+    @Override
+    public void outputAddressBook(String addressBook) {
+
+    }
 }
