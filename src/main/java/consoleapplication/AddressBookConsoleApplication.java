@@ -77,6 +77,8 @@ public class AddressBookConsoleApplication {
         }
         return addressBook;
     }
+
+
     private static void deleteContact() {
     }
 

@@ -19,7 +19,7 @@ public class AddressBookTest {
         Contact contact = new Contact("Anna", "Jack", "Metal Box Factory 88, London SE1", "07888999777");
         addressBook.addContact(contact);
 
-       // Assert.asse check if adres buk kontains it
+       Assert.assertEquals(contact, addressBook );
 
 
     }
@@ -35,11 +35,13 @@ public class AddressBookTest {
 
     @Test
     public void testRemoveContactAndSucceed() {
+        Contact contact = new Contact("Anna", "Jack", "Metal Box Factory 88, London SE1", "07888999777");
+        addressBook.addContact(contact);
 
     }
 
     @Test
-    public void testClearAllContactsListAndSuceed() {
+    public void testClearAllContactsListAndSucceed() {
 
     }
 }

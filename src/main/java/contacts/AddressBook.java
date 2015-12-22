@@ -33,11 +33,9 @@ public class AddressBook {
         contacts.clear();
     }
 
-    public void listAllContacts(){
-
+    public int getNumberOfContacts()
+    {
+        return contacts.size();
     }
-
-
-
 
 }
