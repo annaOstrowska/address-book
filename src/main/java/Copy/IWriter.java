@@ -1,5 +1,5 @@
 package copy;
 
 public interface IWriter {
-    public void outputAddressBook(String addressBook);
+    void outputAddressBook(String addressBook);
 }

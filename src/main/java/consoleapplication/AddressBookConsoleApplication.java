@@ -2,11 +2,7 @@ package consoleapplication;
 
 import contacts.AddressBook;
 import contacts.Contact;
-import copy.AddressSplitter;
-import copy.CONTACTLINES;
-import copy.IReader;
-import copy.MyFileReader;
-import copy.TerminalReader;
+import copy.*;
 
 public class AddressBookConsoleApplication {
 
@@ -17,7 +13,6 @@ public class AddressBookConsoleApplication {
         TerminalReader reader = new TerminalReader();
         AddressBookConsoleApplication app = new AddressBookConsoleApplication();
         addressBook = app.loadAddressBook();
-        System.out.println("Would you like to add a new address?");
 
         System.out.println("Welcome to your Address Book.");
         System.out.println("Chose the option and follow the instructions.");
@@ -36,19 +31,22 @@ public class AddressBookConsoleApplication {
         switch(command)
         {
             case "AddContact":
-                addContact();
+                app.addContact();
                 break;
 
             case "DeleteContact":
-                deleteContact();
+                app.deleteContact();
                 break;
 
             case "ListContacts":
-                listContacts();
+                IWriter terminalWriter = new TerminalWriter();
+                app.outputContacts(terminalWriter);
                 break;
 
             case "Exit":
                 exit = true;
+                IWriter fileWriter = new MyFileWriter();
+                app.outputContacts(fileWriter);
                 break;
 
             default:
@@ -58,7 +56,7 @@ public class AddressBookConsoleApplication {
         }
             }
 
-        while(exit == false);
+        while(!exit);
 
     }
 
@@ -79,13 +77,14 @@ public class AddressBookConsoleApplication {
     }
 
 
-    private static void deleteContact() {
+    private void deleteContact() {
     }
 
-    private static void addContact() {
+    private void addContact() {
         
     }
-    private static void listContacts() {
+    private void outputContacts(IWriter writer) {
+        writer.outputAddressBook(addressBook.getAddressBookAsString());
     }
     
 }
