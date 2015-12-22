@@ -65,10 +65,10 @@ public class AddressBookConsoleApplication {
 
 
     private AddressBook loadAddressBook() {
-        Contact contact = new Contact();
         IReader bookReader = new MyFileReader();
         AddressSplitter splitter = new AddressSplitter(bookReader.read());
         for (int i = 0; i < splitter.getAddresses().length; i++) {
+            Contact contact = new Contact();
             contact.setFirstName(splitter.getAddressNField(i, CONTACTLINES.FirstName.getValue()));
             contact.setLastName(splitter.getAddressNField(i, CONTACTLINES.LastName.getValue()));
             contact.setHomeAddress(splitter.getAddressNField(i, CONTACTLINES.AddressOne.getValue()));

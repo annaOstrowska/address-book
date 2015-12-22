@@ -49,11 +49,11 @@ public class AddressBook {
     }
 
     public String getAddressBookAsString(){
-        String addressBookAsString;
+        StringBuilder addresses = new StringBuilder();
         for(Contact contact: contacts){
-            contact.getContactAsString();
+            addresses.append(contact.getContactAsString());
         }
-        return null;
+        return addresses.toString();
     }
 
 }
