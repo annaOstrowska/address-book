@@ -20,7 +20,7 @@ public class AddressSplitter {
 
     private String[] getAddressNArray(int addressNo){
 
-        return getAddressN(addressNo).split(", ");
+        return getAddressN(addressNo).split("~ ");
     }
 
     private String getAddressN(int addressNo){

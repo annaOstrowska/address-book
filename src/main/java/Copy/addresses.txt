@@ -1,2 +1,3 @@
-firstName, lastName, homeAddressLines, 07976125051;
-firstName2, lastName2, homeAddressLines2, 555050769;
+firstName~ Mario~ 207 Manchester Road, London, E14 3DR~ 07976125051;
+firstName2~ lastName2~ homeAddressLines2~ 555050769;
+Daniel~ Quirk~ Dune~ 55505005050;
