@@ -6,8 +6,6 @@ import copy.AddressSplitter;
 import copy.CONTACTLINES;
 import copy.IReader;
 import copy.MyFileReader;
-
-import contacts.AddressBook;
 import copy.TerminalReader;
 
 public class AddressBookConsoleApplication {
@@ -62,11 +60,9 @@ public class AddressBookConsoleApplication {
 
         while(exit == false);
 
-
-
-
-
     }
+
+
 
     private AddressBook loadAddressBook() {
         Contact contact = new Contact();
@@ -86,6 +82,8 @@ public class AddressBookConsoleApplication {
 
     private static void addContact() {
         
+    }
+    private static void listContacts() {
     }
     
 }
