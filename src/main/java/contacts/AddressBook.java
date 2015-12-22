@@ -13,14 +13,12 @@ public class AddressBook {
 
     public boolean addContact(Contact contact) {
         // First check if address already exists
-//        if (contacts.contains(contact)) {
-//            return false;
-//        } else {
-//            contacts.add(contact);
-//            return true;
-//        }
-        contacts.add(contact);
-        return true;
+        if (contacts.contains(contact)) {
+            return false;
+        } else {
+            contacts.add(contact);
+            return true;
+        }
     }
 
     public void removeContact(Contact contact) {
