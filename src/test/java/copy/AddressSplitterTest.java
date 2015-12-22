@@ -15,6 +15,6 @@ public class AddressSplitterTest {
 
         //same line
         AddressSplitter addressSplitter = new AddressSplitter(addressLines);
-        assertEquals("lastName2", addressSplitter.getAddressNField(1, ContactLines.LastName));
+        assertEquals("lastName2", addressSplitter.getAddressNField(1, CONTACTLINES.LastName.getValue()));
     }
 }
