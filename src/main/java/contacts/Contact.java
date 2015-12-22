@@ -19,28 +19,34 @@ public class Contact {
     }
 
     public String getFirstName(){
+
         return firstName;
     }
 
     public String getLastName(){
+
         return lastName;
     }
 
     public String getHomeAddress(){
+
         return homeAddress;
     }
 
     public String getPhoneNumber(){
+
         return phoneNumber;
     }
 
     public String getContactAsString(){return firstName + ", " + lastName + ", " + homeAddress + ", " + phoneNumber + ";";}
 
     public void setFirstName(String firstName) {
+
         this.firstName = firstName;
     }
 
     public void setLastName(String lastName) {
+
         this.lastName = lastName;
     }
 
@@ -50,6 +56,7 @@ public class Contact {
     }
 
     public void setPhoneNumber(String phoneNumber){
+
         this.phoneNumber = phoneNumber;
     }
 
