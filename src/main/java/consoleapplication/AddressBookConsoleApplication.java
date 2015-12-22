@@ -15,6 +15,10 @@ public class AddressBookConsoleApplication {
         addressBook = app.loadAddressBook();
 
         System.out.println("Welcome to your Address Book.");
+
+        boolean exit = false;
+        do {
+
         System.out.println("Chose the option and follow the instructions.");
         System.out.println("AddContact: <first name> <second name> <home address> <phone number>.");
         System.out.println("DeleteContact: <index>");
@@ -23,8 +27,7 @@ public class AddressBookConsoleApplication {
 
 
 
-        boolean exit = false;
-        do {
+
 
             String inputLine = reader.read();
             String[] words = inputLine.split(" ");
@@ -80,6 +83,12 @@ public class AddressBookConsoleApplication {
 
 
     private void deleteContact() {
+        TerminalReader reader = new TerminalReader();
+
+        System.out.println("Which contact do you want to remove, give index?");
+        
+
+
     }
 
     private void addContact() {
