@@ -5,13 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AddressSplitter {
+
+
     String[] addresses;
 
     AddressSplitter (String fullAddress){
         this.addresses = readAllAddresses(fullAddress);
 
     }
-
+   // get address field AT
     public String getAddressNField(int addressNo, int field){
         return getAddressNArray(addressNo)[field];
     }
