@@ -64,7 +64,7 @@ public class AddressBookConsoleApplication {
 
 
 
-    private AddressBook loadAddressBook() {
+    public AddressBook loadAddressBook() {
         IReader bookReader = new MyFileReader();
         AddressSplitter splitter = new AddressSplitter(bookReader.read());
         for (int i = 0; i < splitter.getAddresses().length; i++) {
