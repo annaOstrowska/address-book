@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+
 public class AddressBookTest {
 
     private AddressBook addressBook;
@@ -19,29 +20,40 @@ public class AddressBookTest {
         Contact contact = new Contact("Anna", "Jack", "Metal Box Factory 88, London SE1", "07888999777");
         addressBook.addContact(contact);
 
-       Assert.assertTrue();
-
-
+        Assert.assertTrue(addressBook.hasContact(contact));
     }
 
     @Test
-
-    public void testAddNewContactAndFail() {
-//na poczatku konfiguruje adres buka tak zeby mial juz kontakt a potem chce dodac ten sam co juz jest i sprawdzam ze sie nie dodal
-// biore liste contaktow i licze ile wystapien jest mojego kontaktu i powinno sie rownac 1 -.prywatna metoda testu sprawdz ile wystapien kontaktow w liscie
-
-    }
-
-
-    @Test
-    public void testRemoveContactAndSucceed() {
+    public void testCannotAddSameContactTwice() {
         Contact contact = new Contact("Anna", "Jack", "Metal Box Factory 88, London SE1", "07888999777");
         addressBook.addContact(contact);
 
+        boolean contactAdded = addressBook.addContact(contact);
+        Assert.assertFalse(contactAdded);
+    }
+
+
+    @Test
+    public void testCanRemoveContactAndSucceed() {
+        Contact contact = new Contact("Anna", "Jack", "Metal Box Factory 88, London SE1", "07888999777");
+        addressBook.addContact(contact);
+        addressBook.removeContact(contact);
+
+        Assert.assertFalse(addressBook.hasContact(contact));
     }
 
     @Test
     public void testClearAllContactsListAndSucceed() {
+        Contact contact1 = new Contact("Annaa", "Jack", "Metal Box Factory 88, London SE1", "07888999777");
+        Contact contact2 = new Contact("An", "Ja", "Metal Box Factory 89, London SE1", "07888999777");
+        addressBook.addContact(contact1);
+        addressBook.addContact(contact2);
 
+        addressBook.clearConatctList();
+
+        Assert.assertEquals("Expected length of list is 0", 0, addressBook.getNumberOfContacts());
     }
 }
+
+
+
