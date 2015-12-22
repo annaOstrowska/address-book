@@ -11,12 +11,13 @@ public class AddressBook {
     public AddressBook() {
     }
 
-    public void addContact(Contact contact) {
+    public boolean addContact(Contact contact) {
         // First check if address already exists
         if (contacts.contains(contact)) {
-            System.out.println("This address is already there.");
+            return false;
         } else {
             contacts.add(contact);
+            return true;
         }
     }
 
@@ -29,4 +30,12 @@ public class AddressBook {
 
         contacts.clear();
     }
+
+    public void listAllContacts(){
+
+    }
+
+
+
+
 }

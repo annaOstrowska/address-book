@@ -10,10 +10,11 @@ public class AddressSplitterTest {
 
     @Test
     public void testGetAddressNField() throws Exception {
-        AddressSplitter addressSplitter;
         MyFileReader reader = new MyFileReader();
         String addressLines = reader.read();
-        addressSplitter = new AddressSplitter(addressLines);
+
+        //same line
+        AddressSplitter addressSplitter = new AddressSplitter(addressLines);
         assertEquals("lastName2", addressSplitter.getAddressNField(1, ContactLines.LastName));
     }
 }

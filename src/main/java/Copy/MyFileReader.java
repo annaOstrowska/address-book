@@ -14,6 +14,7 @@ public class MyFileReader implements IReader {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             StringBuffer stringBuffer = new StringBuffer();
             String line = null;
+
             while((line = bufferedReader.readLine())!=null){
                 stringBuffer.append(line).append("\n");
 
